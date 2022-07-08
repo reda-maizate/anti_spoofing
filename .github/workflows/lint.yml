@@ -21,4 +21,4 @@ jobs:
         black --check --verbose .
     - name: Run pylint
       run: |
-        pylint .
+        pylint src/*.py
