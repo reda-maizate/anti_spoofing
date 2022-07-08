@@ -1,4 +1,9 @@
 opencv-python
+tqdm
 pylint
+# astroid 2.2.0 seems to break everything in Pylint
+astroid==2.1.0
+# isort above 4.3.4 introduces the "__init__.py not found" issue
+isort==4.3.4
 black
 pre-commit

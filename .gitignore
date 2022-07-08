@@ -133,4 +133,5 @@ dmypy.json
 *__pycache__*
 
 # Dataset
-src/dl/data/*
+src/dl/raw_data/*
+src/dl/processed_data/*

@@ -16,6 +16,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install black
         pip install pylint
+        # astroid 2.2.0 seems to break everything in Pylint
+        pip install astroid==2.1.0
+        # isort above 4.3.4 introduces the "__init__.py not found" issue
+        pip install isort==4.3.4
     - name: Run black
       run: |
         black --check --verbose .
