@@ -1,4 +1,4 @@
-name: Lint
+name: Build, Lint
 
 on: [push]
 
@@ -6,18 +6,34 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v3
+    - uses: actions/checkout@v1
+    - name: Run Makefile build for Development
+      run: make build-dev
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-python@v1
       with:
-        python-version: ${{ matrix.python-version }}
-    - name: Install dependencies
+        python-version: '3.8'
+    - name: Install Linters
       run: |
-        pip install black
         pip install pylint
-    - name: Run black
+        pip install black
+        pip install flake8
+        pip install bandit
+    - name: Run Linters
+      run: make lint
+    - name: Send report to CodeClimate
       run: |
-        black --check --verbose .
-    - name: Run pylint
-      run: |
-        pylint --rcfile=setup.cfg --verbose .
+        export GIT_BRANCH="${GITHUB_REF/refs\/heads\//}"
+        curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+        chmod +x ./cc-test-reporter
+        ./cc-test-reporter format-coverage -t coverage.py coverage.xml
+        ./cc-test-reporter upload-coverage -r "${{ secrets.CC_TEST_REPORTER_ID }}"
+    - name: SonarCloud scanner
+      uses: sonarsource/sonarcloud-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
