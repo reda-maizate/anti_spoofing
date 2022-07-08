@@ -7,8 +7,12 @@ repos:
       - id: black
         args: [--diff, --check]
 
-  - repo: https://github.com/pre-commit/mirrors-pylint
-    rev: v3.0.0a3
+  - repo: local
     hooks:
       - id: pylint
-        args: []
+        name: pylint
+        entry: pylint
+        language: system
+        types: [python]
+        require_serial: true
+        args: [--rcfile=setup.cfg]
