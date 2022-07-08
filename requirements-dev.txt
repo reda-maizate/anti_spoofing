@@ -1,0 +1,4 @@
+opencv-python
+pylint
+black
+pre-commit

@@ -7,7 +7,7 @@ The dataset is available on [Kaggle](https://www.kaggle.com/datasets/tapakah68/a
 
 ## Usage
 
-### Environment
+### Set up the environment
 
 #### For conda
 Use the following command to create a conda environment:

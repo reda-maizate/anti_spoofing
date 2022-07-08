@@ -131,3 +131,6 @@ dmypy.json
 # JetBrains IDEs
 .idea/
 *__pycache__*
+
+# Dataset
+src/dl/data/*
