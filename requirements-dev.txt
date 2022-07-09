@@ -1,12 +1,17 @@
+# PLEASE READ: Change the file below to match your distribution.
+# As a M1 macOS user, you can let this environment.yml file like it is.
+# But for other distributions (Windows, Linux, etc.), you may need to update the file.
+
+tensorflow-macos  # For M1 macOS users only, comment it if you are not using M1 macOS
+tensorflow-metal  # For M1 macOS users only, comment it if you are not using M1 macOS
+# tensorflow  # For others distributions users, uncomment this line
 opencv-python
 tqdm
-pylint #==2.2.3
-# astroid 2.2.0 seems to break everything in Pylint
-#astroid==2.1.0
-# isort above 4.3.4 introduces the "__init__.py not found" issue
-#isort==4.3.4
+scikit-image
+numpy
+matplotlib
+pylint
 black
 pre-commit
 flake8
-coverage
 bandit
