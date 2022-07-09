@@ -29,13 +29,16 @@ def prepare_data(data_directory: str, output_directory: str) -> None:
             get_data_type(file, output_directory)
 
     if conf.DATA_DIRECTORIES_TO_CONCATENATE:
-        os.makedirs(os.path.join(output_directory,
-                                 conf.NAME_CONCATENATED_DIRECTORY),
-                    exist_ok=True)
+        os.makedirs(
+            os.path.join(output_directory, conf.NAME_CONCATENATED_DIRECTORY),
+            exist_ok=True,
+        )
 
-        concatenate_multiple_directories_to_one(conf.DATA_DIRECTORIES_TO_CONCATENATE,
-                                                output_directory,
-                                                conf.NAME_CONCATENATED_DIRECTORY)
+        concatenate_multiple_directories_to_one(
+            conf.DATA_DIRECTORIES_TO_CONCATENATE,
+            output_directory,
+            conf.NAME_CONCATENATED_DIRECTORY,
+        )
         for directory in conf.DATA_DIRECTORIES_TO_CONCATENATE:
             shutil.rmtree(os.path.join(output_directory, directory))
 
@@ -97,9 +100,9 @@ def copy_image_file_to_processed_dir(file_path: str, output_directory: str) -> N
     shutil.copyfile(file_path, new_file_path)
 
 
-def concatenate_multiple_directories_to_one(directories_to_concatenate: List[str],
-                                            output_directory: str,
-                                            new_folder_name: str) -> None:
+def concatenate_multiple_directories_to_one(
+    directories_to_concatenate: List[str], output_directory: str, new_folder_name: str
+) -> None:
     """
     Concatenates all the files in the given directory to one folder.
     :param directories_to_concatenate: list of directories to concatenate
