@@ -10,4 +10,4 @@ dependencies:
   - pip
   - tensorflow-deps  # For M1 macOS users only, comment if you are not using M1 macOS
   - pip:
-        - -r requirements.txt
+    - -r requirements.txt
