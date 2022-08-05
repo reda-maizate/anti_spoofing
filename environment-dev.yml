@@ -1,0 +1,13 @@
+# PLEASE READ: Change the file below to match your distribution.
+# As a M1 macOS user, you can let this environment.yml file like it is.
+# But for other distributions (Windows, Linux, etc.), you may need to update the file.
+
+name: anti-spoofing_env
+channels:
+  - apple  # For M1 macOS users only, comment if you are not using M1 macOS
+dependencies:
+  - python=3.8
+  - pip
+  - tensorflow-deps  # For M1 macOS users only, comment if you are not using M1 macOS
+  - pip:
+    - -r requirements-dev.txt

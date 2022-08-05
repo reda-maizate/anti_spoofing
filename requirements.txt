@@ -1,2 +1,12 @@
+# PLEASE READ: Change the file below to match your distribution.
+# As a M1 macOS user, you can let this file like it is.
+# But for other distributions (Windows, Linux, etc.), you may need to update the file.
+
+tensorflow-macos  # For M1 macOS users only, comment it if you are not using M1 macOS
+tensorflow-metal  # For M1 macOS users only, comment it if you are not using M1 macOS
+# tensorflow  # For others distributions users, uncomment this line
 opencv-python
 tqdm
+scikit-image
+numpy
+matplotlib
