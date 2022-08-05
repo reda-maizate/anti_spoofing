@@ -8,7 +8,7 @@ The dataset is available on [Kaggle](https://www.kaggle.com/datasets/tapakah68/a
 
 *This project was also made to learn the entire fabric of Deep Learning life cycle.*
 
-[[TOC]]
+[[_TOC_]]
 
 ## Usage
 
@@ -21,7 +21,7 @@ The dataset is available on [Kaggle](https://www.kaggle.com/datasets/tapakah68/a
 After updated this files, use the following command to create the conda environment:
 
 ```bash
-conda create -f environment.yml
+conda env create -f environment.yml
 ```
 
 ### Set up the development environment
@@ -33,5 +33,5 @@ conda create -f environment.yml
 After updated this files, use the following command to create the conda environment:
 
 ```bash
-conda create -f environment-dev.yml
+conda env create -f environment-dev.yml
 ```
