@@ -1,7 +1,6 @@
 # Anti-spoofing for face recognition
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/30072246ae93c8bb7c5b/maintainability)](https://codeclimate.com/github/reda-maizate/anti_spoofing/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/30072246ae93c8bb7c5b/test_coverage)](https://codeclimate.com/github/reda-maizate/anti_spoofing/test_coverage)
-
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=reda-maizate_anti_spoofing&metric=bugs)](https://sonarcloud.io/summary/new_code?id=reda-maizate_anti_spoofing) [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=reda-maizate_anti_spoofing&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=reda-maizate_anti_spoofing) [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=reda-maizate_anti_spoofing&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=reda-maizate_anti_spoofing) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=reda-maizate_anti_spoofing&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=reda-maizate_anti_spoofing) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=reda-maizate_anti_spoofing&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=reda-maizate_anti_spoofing)
 
 This project was made to recognize if the given image is from live or a spoofed one.
 The dataset is available on [Kaggle](https://www.kaggle.com/datasets/tapakah68/anti-spoofing).
