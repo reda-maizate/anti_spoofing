@@ -13,25 +13,25 @@ def preprocess_the_data(data_directory: str) -> Tuple[str, str]:
     """
     train_ds = keras.utils.image_dataset_from_directory(
         directory=data_directory,
-        labels='inferred',
-        label_mode='categorical',
+        labels="inferred",
+        label_mode="categorical",
         batch_size=conf.BATCH_SIZE,
         image_size=conf.IMAGE_SHAPE,
         seed=conf.SEED,
         shuffle=True,
-        subset='training'
+        subset="training",
     )
 
     validation_ds = keras.utils.image_dataset_from_directory(
         directory=data_directory,
-        labels='inferred',
-        label_mode='categorical',
+        labels="inferred",
+        label_mode="categorical",
         batch_size=conf.BATCH_SIZE,
         image_size=conf.IMAGE_SHAPE,
         seed=conf.SEED,
         validation_split=0.2,
         shuffle=True,
-        subset='validation'
+        subset="validation",
     )
     return train_ds, validation_ds
 
