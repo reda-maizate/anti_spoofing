@@ -10,6 +10,9 @@ tqdm
 scikit-image
 numpy
 matplotlib
+wandb
+fastapi
+uvicorn
 pylint
 black
 pre-commit
