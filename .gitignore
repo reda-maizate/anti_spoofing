@@ -141,7 +141,7 @@ src/dl/models/logs
 src/dl/wandb
 
 # Image storage
-src/app/backend/storage/*
+src/app/backend/storage
 
 # MacOS
 .DS_Store
