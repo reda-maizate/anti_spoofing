@@ -136,5 +136,9 @@ dmypy.json
 src/dl/raw_data/*
 src/dl/processed_data/*
 
+# Training logs
+src/dl/models/logs
+src/dl/wandb
+
 # MacOS
 .DS_Store

@@ -10,3 +10,8 @@ tqdm
 scikit-image
 numpy
 matplotlib
+wandb
+fastapi
+uvicorn
+python-multipart
+streamlit
