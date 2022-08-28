@@ -16,10 +16,10 @@ class PredictionModel:
     @classmethod
     def from_predictions(cls, predictions: List[float]):
         return cls(
-            top_score=float(np.max(predictions)),
+            top_score=round(float(np.max(predictions)), 3) * 100,
             top_label=conf.CLASSES[np.argmax(predictions)],
             scores={
-                conf.CLASSES[index]: float(prediction)
+                conf.CLASSES[index]: round(float(prediction), 3) * 100
                 for index, prediction in enumerate(predictions)
             },
         )

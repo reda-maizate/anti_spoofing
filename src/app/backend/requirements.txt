@@ -1,0 +1,7 @@
+uuid
+opencv-python
+fastapi
+numpy
+pillow
+keras
+uvicorn
