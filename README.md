@@ -7,7 +7,9 @@ The dataset is available on [Kaggle](https://www.kaggle.com/datasets/tapakah68/a
 
 *This project was also made to learn the entire fabric of Deep Learning life cycle.*
 
-[[_TOC_]]
+## Infrastructure
+
+![anti_spoofing_pipeline_v1](./images/anti_spoofing_pipeline_v1.png)
 
 ## Usage
 
