@@ -1,7 +1,9 @@
 uuid
 opencv-python
 fastapi
+python-multipart
 numpy
-pillow
+Pillow
 keras
+tensorflow
 uvicorn

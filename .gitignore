@@ -102,7 +102,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
+src/.env
 .venv
 env/
 venv/
@@ -137,7 +137,7 @@ src/dl/raw_data/*
 src/dl/processed_data/*
 
 # Training logs
-src/dl/models/logs
+src/models/logs
 src/dl/wandb
 
 # Image storage

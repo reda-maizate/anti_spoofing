@@ -2,7 +2,7 @@ import os
 
 # Model paths
 MODEL_NAME = "resnet_ep_15_val_acc_0.9710366129875183.h5"
-MODELS_PATH = os.path.join("..", "..", "dl", "models", "checkpoints")
+MODELS_PATH = os.path.join("models", "checkpoints")
 MODEL_PATH = os.path.join(MODELS_PATH, MODEL_NAME)
 
 # Preprocessing configurations

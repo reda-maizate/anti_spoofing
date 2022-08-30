@@ -40,6 +40,6 @@ LOSS = "sparse_categorical_crossentropy"
 METRICS = ["accuracy"]
 EARLY_STOPPING_PATIENCE = 5
 MODELS_CHECKPOINT_PATH = os.path.join(
-    os.path.dirname(os.path.abspath(__file__)), "models", "checkpoints"
+    os.path.dirname(os.path.abspath(__file__)), "../models", "checkpoints"
 )
-LOGS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "models", "logs")
+LOGS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../models", "logs")
