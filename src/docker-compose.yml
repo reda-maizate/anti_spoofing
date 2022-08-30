@@ -12,6 +12,9 @@ services:
     volumes:
       - ./app/storage:/app/storage
       - ./models:/app/models
+    environment:
+      - BACKEND_API_PORT=${BACKEND_API_PORT}
+      - BACKEND_URL=${BACKEND_URL}
 
   backend:
     build: app/backend
