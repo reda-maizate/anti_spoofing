@@ -4,7 +4,7 @@ from typing import List, Tuple
 import numpy as np
 from keras.saving.save import load_model
 
-from src.app.backend import config as conf
+import config as conf
 
 
 @dataclass

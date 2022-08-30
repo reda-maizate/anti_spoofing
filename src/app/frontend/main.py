@@ -18,7 +18,7 @@ if st.button("Upload the image"):
     if image_uploaded is not None or image_camera is not None:
         image = image_uploaded or image_camera
         files = {"file": image.getvalue()}
-        res = requests.post("http://localhost:8080/predict", files=files)
+        res = requests.post("http://backend:8080/predict", files=files)
         img_path = res.json()
         image = Image.open(img_path.get("name"))
         st.image(image, width=500)

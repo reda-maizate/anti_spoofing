@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+
+  frontend:
+    build: app/frontend
+    container_name: frontend
+    ports:
+      - "${FRONTEND_API_PORT}:${FRONTEND_API_PORT}"
+    depends_on:
+      - backend
+    volumes:
+      - ./app/storage:/app/storage
+      - ./models:/app/models
+
+  backend:
+    build: app/backend
+    container_name: backend
+    ports:
+      - "${BACKEND_API_PORT}:${BACKEND_API_PORT}"
+    volumes:
+      - ./app/storage:/app/storage
+      - ./models:/app/models

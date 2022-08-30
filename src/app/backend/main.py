@@ -8,8 +8,8 @@ import numpy as np
 from PIL import Image
 from starlette.responses import JSONResponse
 
-from src.app.backend import inference
-from src.app.backend import config as conf
+import inference
+import config as conf
 
 
 app = FastAPI()
@@ -29,7 +29,6 @@ def predict(file: UploadFile = File(...)) -> JSONResponse:
     image_as_array = np.asarray(resized_image)
     prediction_object, image_as_array = inference.predict(image_as_array)
     name = f"{str(uuid.uuid4())}_{round(prediction_object.top_score, 3)}.jpg"
-    os.makedirs("storage", exist_ok=True)
     cv2.imwrite(os.path.join("storage", name), np.asarray(image))
     return JSONResponse(
         content={
