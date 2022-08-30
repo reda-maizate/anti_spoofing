@@ -4,7 +4,7 @@ from keras.callbacks import ModelCheckpoint
 from tqdm.keras import TqdmCallback
 import wandb
 from wandb.keras import WandbCallback
-from src.models import model
+from src.models.basemodel_resnet import model
 from src.dl import config as conf
 from src.dl.preprocess import preprocess_the_data
 
