@@ -7,7 +7,6 @@ from PIL import Image
 BACKEND_URL = os.environ["BACKEND_URL"]
 BACKEND_API_PORT = os.environ["BACKEND_API_PORT"]
 
-# https://discuss.streamlit.io/t/version-0-64-0-deprecation-warning-for-st-file-uploader-decoding/4465
 st.set_option("deprecation.showfileUploaderEncoding", False)
 
 # defines an h1 header
@@ -23,9 +22,7 @@ if st.button("Upload the image"):
     if image_uploaded is not None or image_camera is not None:
         image = image_uploaded or image_camera
         files = {"file": image.getvalue()}
-        res = requests.post(
-            f"http://{BACKEND_URL}:{BACKEND_API_PORT}/predict", files=files
-        )
+        res = requests.post(f"{BACKEND_URL}:{BACKEND_API_PORT}/predict", files=files)
         img_path = res.json()
         image = Image.open(img_path.get("name"))
         st.image(image, width=500)
