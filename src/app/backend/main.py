@@ -36,9 +36,3 @@ def predict(file: UploadFile = File(...)) -> JSONResponse:
             "name": os.path.join(os.path.abspath("storage"), name),
         }
     )
-
-
-# if __name__ == "__main__":
-# import uvicorn
-
-# uvicorn.run(app, host="0.0.0.0", port=8080, debug=True)
