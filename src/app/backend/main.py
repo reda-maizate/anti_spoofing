@@ -22,9 +22,7 @@ def index():
 
 @app.post("/predict")
 def predict(file: UploadFile = File(...)) -> JSONResponse:
-    # TODO: Trouver un moyen d'importer la librairie PyQT5.
     image = Image.open(file.file)
-    # image.show()
     resized_image = image.resize(conf.IMAGE_SHAPE)
     image_as_array = np.asarray(resized_image)
     prediction_object, image_as_array = inference.predict(image_as_array)
