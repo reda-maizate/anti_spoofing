@@ -9,6 +9,8 @@ The dataset is available on [Kaggle](https://www.kaggle.com/datasets/tapakah68/a
 
 ## Infrastructure
 
+🚧 Currently working in the v1.0.0... 🚧
+
 ![anti_spoofing_pipeline_v1](./images/anti-spoofing_v1.png)
 
 ## Usage
